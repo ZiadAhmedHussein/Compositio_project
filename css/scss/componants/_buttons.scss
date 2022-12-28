@@ -1,0 +1,8 @@
+@use "../helpers/variables" as *;
+input[type="submit"] {
+    background-color: $mainColor !important;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,30 @@
+@use "../helpers/mixens" as *;
+@use "../helpers/variables" as *;
+* {
+    @include prefixer(box-sizing, border-box, webkit moz);
+} 
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    @media #{$mobile-screen} {
+        width: 100%;
+    }
+    @media #{$medium-screen} {
+        width: 750px;
+    }
+    @media #{$large-screen} {
+        width: 970px;
+    }
+    @media #{$xl-screen} {
+        width: 1170px;
+    }
+    
+}
+
+.clear-fix {
+    clear: both;
+}

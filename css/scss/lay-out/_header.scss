@@ -1,0 +1,108 @@
+@use "../helpers/variables" as *;
+@use "../componants/classes";
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid $textColor;
+    overflow: hidden;
+    position: relative;
+    @media #{$mobile-screen} {
+        padding: 0;
+    }
+    .logo {
+        @media #{$mobile-screen} {
+            float: $float-l
+        }
+        @media #{$medium-screen} {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+        @media #{$large-screen} {
+            width: 30%;
+            float: $float-l; //need
+            line-height: 100%;
+            text-align: left;
+        }
+        h1 {
+            letter-spacing: 2px;
+            @media #{$mobile-screen} {
+                margin: 10px 0 0;
+                letter-spacing: 0;
+            }
+            @media #{$medium-screen} {
+                margin-bottom: 0;
+            }
+            @media #{$large-screen} {
+                margin-bottom: 20px;
+            }
+            &::first-letter {
+                font-size: 45px;
+            }
+        }
+        p{
+            color: $textColor;
+        }
+    }
+    .nav-icon {
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 38px;
+        @media #{$mobile-screen} {
+            display: block;
+        }
+        @media #{$medium-screen} {
+            display: none;
+        }
+        &:hover {
+            color: $textColor;
+        }
+    }
+    .nav-bar {
+        overflow: hidden;
+        border-radius: 20px;
+        @media #{$mobile-screen} {
+            width: 100%;
+            border-radius: 0;
+            display: none;
+        }
+        @media #{$medium-screen} {
+            width: 100%;
+            float: none;
+            margin-top: 30px;
+        }
+        @media #{$large-screen} {
+            width: 70%;
+            float: $float-l; //need
+            margin-top: 1em;
+        }
+        li {
+            background-color: $mainColor;
+            float: $float-l; //need
+            width: 20%;
+            text-align: center;
+            @media #{$mobile-screen} {
+                background-color: $textColor;
+                width: 100%;
+                float: none;
+                text-align: center;
+                
+            }
+            a {
+                display: inline-block;
+                color: #fff;
+                padding: 20px 0 15px;
+                font-size: 20px;
+                @media #{$mobile-screen} {
+                    color: $mainColor;
+                    padding: 15px 0;
+                    font-size: 22px;
+                }
+                &:hover {
+                    color: #ddd;
+                }
+            }
+        }
+    }
+}
